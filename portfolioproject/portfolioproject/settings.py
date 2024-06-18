@@ -139,6 +139,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 ##JAZZMIN: Aqui puedes cambiar cosas de jazzmin
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 # Configuración de Jazzmin
 
 JAZZMIN_SETTINGS = {

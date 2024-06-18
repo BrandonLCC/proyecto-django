@@ -1,5 +1,5 @@
 from django.db import models
-
+from .utils import encrypt_message, decrypt_message
 # Create your models here.
 
 
@@ -37,7 +37,15 @@ class Contacto(models.Model):
     nombre = models.CharField(max_length=100)
     email = models.EmailField()
     mensaje = models.TextField()
+    mensaje_cifrado = models.TextField()
     fecha = models.DateTimeField(auto_now_add=True)
 
+def save(self, *args, **kwargs):
+    self.mensaje_cifrado = encrypt_message(self.mensaje)
+    super().save(*args,**kwargs)
+
+def get_mensaje(self):
+    return decrypt_message(self.mensaje_cifrado)
+    
 def __str__(self):
     return self.nombre ##Devuelve el nombre del conctacto
