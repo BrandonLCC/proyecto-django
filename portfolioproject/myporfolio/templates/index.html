@@ -1,0 +1,282 @@
+{% load static %}
+{% load bootstrap5 %}
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio</title>
+    <!-- FONSTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!--Link boostap y enlace css-->
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+
+</head>
+<body>
+<div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+    <div class="carousel-inner ">
+    <div class="carousel-item active  ">
+        <!--NAV-->
+        <nav class="navbar col-12 navbar-expand-lg ">
+        <div class="color-texto-navar container-fluid">
+
+            <img class = "logo ms-2" src="{% static 'images/logo.png' %}" alt="...">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav m-1 my-2 mx-auto ">
+                
+                <li class="nav-item ">
+                <img class = "iconos-nav ms-3 my-1" src="{% static '/images/inicio-27.png' %}" alt="...">
+                <a class="etiqueta-a nav-link px-5" aria-current="page" href="#seccion-inicio">Inicio</a>
+
+                </li>
+                <li class="nav-item ">
+                    <img class="iconos-nav ms-3 my-1" src="{% static 'images/proyecto.png' %}" alt="...">
+                    <a class="etiqueta-a nav-link px-5" aria-current="page" href="#seccion-proyectos">Proyectos</a>
+
+                </li>
+                <li class="nav-item  ">
+
+                    <img class="iconos-nav ms-3 my-1" src="{% static 'images/conctacto.png' %}" alt="">
+                    <a class="etiqueta-a nav-link px-5" href="#seccion-conctacto">Contactos</a>
+                </li>
+                <li class="nav-item ">
+                    <img class="iconos-nav ms-3 my-1" src="{% static 'images/otros-27.png' %}" alt="">
+                    <a class="etiqueta-a nav-link px-5" href="#seccion-otros">Otros</a>
+                </li>
+                
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <!--FIN DEL NAV -->
+    
+    <!-- IMAGEN CARRUSEL --> 
+    <img src="{% static 'images/example.jpg' %}" class="imagen-carrusel img-carrusel d-block w-100" alt="...">
+    <!--FIN IMAGEN CARRUSEL-->
+    
+    </div>  
+    <!-- TEXTO PRENSENTACION CARRUSEL -->
+    <div  class="texto-presentacion-carrusel  my-5  py-5 text-light">
+        <h1 class = "hijo-texto-carrusel-1 col-11 col-sm-11  col-md-9  my-2 p-5  mx-auto text-center ">Hola, yo soy Brandon Casas</h1>
+        
+        <p class = "hijo-texto-carrusel  col-11 col-sm-11  col-md-9 p-2 my-auto mx-auto text-center">
+        Soy un ingeniero informatico enfocado en el desarollo de paginas web y te invito a que veas mi portafolio que hice con mucha dedicación ¡Espero que te guste!</p>
+    </div>
+    </div>
+</div>
+<!--FIN CARRUSEL-->
+
+<!--Introduccion-->
+<div id = "seccion-inicio" class = "padre-presentacion col-10 col-sm-10 col-md-7 my-5  mx-auto text-light ">
+
+    <div class = "titulo-presentacion p-2 text-light text-center  ">
+    <h2  >Mi presentación</h2>
+    </div>
+
+    <div>
+    
+    <div class = "texto-padre-presentacion  py-3">
+        
+        <h6 class = " ps-3 py-2 subtitulo-intorduccion text-center">
+        ¡Hola denuevo! para que me conozcas mejor me presentare.
+        </h6>
+        <h6 class = "m-3 ps-3">
+        yo soy un programador que se dedica a la creación de paginas web 
+        en la cual me especializó en el frontend y en la gestión de base de datos, en mi portafolio veras mis diferentes
+        proyectos en la cual  he trabajado dunrante estos años de estudios y puedas ver mis capacidades como desarrollador web, espero que te guste.
+        </h6>
+    </div>
+
+    </div>
+</div>  
+
+<hr class = "col-10 mx-auto my-5 ">
+
+<!--Proyectos -->
+
+<div id = "seccion-proyectos" class="proyecto_padre col-11 mx-auto my-5 ">
+    <div>
+        <h2 class="titulo-proyecto p-3 text-center">Mis proyectos</h2>
+        <p class = "subtitulo-proyecto p-2 text-center text-light">En esta seccion encontraras los proyectos que he realizado durante mis años de experiencia en programacion web. </p>
+    </div>
+
+    
+    <div class = "proyectos mx-3 d-flex flex-wrap">
+            {% for proyecto in proyectos %}
+        <div class=" card m-2 " style="width: 18rem;">
+
+            <img src="{{ proyecto.imagen.url }}" class="card-img-top" alt="{{ proyecto.titulo }}">
+            <div class="card-body">
+            <!--  <p class="card-text p-3">{{ proyecto.categoria }}</p>-->
+            <!-- <p class="card-text p-3">{{ proyecto.tecnologias }}</p>-->
+                <p class="card-text p-3">{{ proyecto.descripcion }}</p>
+
+                <div class = "boton-proyecto p-1 row">
+                    <a href="{{ proyecto.link_sitio }}" class="boton-diseno my-2 py-1 col-8">Ver aquí</a>
+                    <a href="{{ proyecto.link_repositorio }}" class="boton-diseno boton-diseno-2 my-2 py-1 col-8" target="_blank">Repositorio</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+</div>
+
+
+<hr class = "col-10 mx-auto ">
+
+<!--Seccion de skills-->
+<div class = "habilidades-padre col-11 my-5 mx-auto text-light">
+<div class = "titulo-habilidades p-2  text-light text-center">
+    <h2 >Mis habilidades</h2>
+</div>
+<div class = "iconos-habilidades     d-flex flex-wrap">
+    <div class = "diseno-div-iconos  mx-auto my-4">
+        <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-javascript-96.png' %}" alt="">
+        <h5 class = "text-center text-ico-1" >JavaScrip</h5>
+    <p class = "text-center text-ico-1">40%</p>
+    </div> 
+    <div class = "diseno-div-iconos  mx-auto my-4">
+        <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-css-96.png' %}" alt="">
+        <h4 class = "text-center text-ico-2" >css</h4>
+    <p class = "text-center text-ico-2">80%</p>
+    </div>
+
+    <div class = "diseno-div-iconos  mx-auto my-4">
+        <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-python-96.png' %}" alt="">
+        <h5 class = "text-center text-ico-3" >Python</h5>
+    <p class = "text-center text-ico-3">60%</p>
+    </div> 
+
+    <div class = "diseno-div-iconos mx-auto my-4">
+        <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-sql-96.png' %}" alt="">
+        <h5 class = "text-center text-ico-4" >oracle SQL</h5>
+    <p class = "text-center text-ico-4">80%</p>
+    </div> 
+
+    <div class = "diseno-div-iconos  mx-auto my-4">
+        <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-java-96.png' %}" alt="">
+        <h5 class = "text-center text-ico-5" >java</h5>
+    <p class = "text-center text-ico-5">70%</p>
+    
+    </div>
+    <div class = "diseno-div-iconos  mx-auto my-4">
+        <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-bootstrap-96.png' %}" alt="">
+        <h5 class = "text-center text-ico-6" >Boostrap</h5>
+    <p class = "text-center text-ico-6">80%</p>
+    </div>
+</div>
+</div>  
+
+
+
+<hr class = "col-10 mx-auto ">
+
+
+<!--Seccion de conctacto-->
+<div>
+<div id = "seccion-conctactos" class  = "seccion-contactame py-4 col-11 mx-auto d-flex flex-wrap">
+    <div class = "seccion-contactame-left col-10 col-sm-9 col-md-5 mx-auto  my-5 ">
+    <h2 class = "titulo-conctacto p-3 text-light text-center">Redes y Conctacto</h2>
+    <p class = "subtitulo-proyecto p-2 text-center text-light">Estas soon mis redes mas utilizadas para trabajar y comunicarme </p>
+    <div class = " m-3 p-3 py-3  conctato-redes-padre   text-light">
+        <!--Quiero que sean como botones -->
+        <div class = "icono-conctacto py-2   ">
+            <a class = "fondo-icono-redes p-2 col-11 mx-auto mt-2"  href="https://github.com/BrandonLCC" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="display: flex; align-items: center;">
+                <h5 class = "my-auto">GitHub:</h5>
+                <img class="ps-2" src="{% static 'images/icons8-github-30.png' %}" alt="">
+                <h6 class = "my-auto ps-1 py-2" >BrandonLCC</h6>
+            </div>
+            </a>
+        </div>
+
+        <div class = " icono-conctacto py-2 ">
+            <a class = "fondo-icono-redes p-2 col-11 mx-auto"  href="https://wa.me/56933668775" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="display: flex; align-items: center;">
+                <h5 class = "my-auto">WhatsApp:</h5>
+                <img class="ps-2" src="{% static 'images/whatsapp.png' %}" alt="">
+                <h6 class = "my-auto ps-1 py-2">+56 93366 8775</h6>
+            </div>
+            </a>
+        </div>
+        
+        <div class = "icono-conctacto py-2">
+            <a class = "fondo-icono-redes p-2 col-11 mx-auto" href="mailto:br.casas@ducuc.cl" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="display: flex; align-items: center;">
+                <h5 class = "my-auto">Gmail:</h5>
+                <img class="ps-2" src="{% static 'images/conctacto.png' %}" alt="">
+                <h6 class = "my-auto ps-1 py-2">br.casas@duocuc.cl</h6>
+            </div>
+            </a>  
+        </div>
+
+        <div class = " icono-conctacto py-2">
+            <a class = "fondo-icono-redes p-2 col-11 mx-auto mb-2" href="https://www.instagram.com/brandonluis_1/" target="_blank" style="text-decoration: none; color: inherit;">
+            <div style="display: flex; align-items: center;">
+                <h5 class = "my-auto">instagram: </h5>
+                <img class="ps-2" src="{% static 'images/instagram.png' %}" alt="">
+                <h6 class = "my-auto ps-1 py-2">brandonluis_1</h6>
+            </div>
+            </a>  
+        </div>
+
+        </div>
+    </div>
+
+    
+    <div class = "seccion-contactame-right col-10  col-sm-9  col-md-5  mx-auto  mx-2">
+    <h2 class = "titulo-formulario p-3 text-light text-center">Formulario directo</h2>
+
+<!--               Formulario                 -->
+    <p  class = "subtitulo-formulario p-2 text-center text-light" id = "validar">Puedes escribirme directamente  por correo electronico en este formulario para mantenernos en conctacto</p>
+        <form id="miFormulario" class="text-light m-2 mx-3 py-3 "  action = "{% url 'contacto_nuevo' %}" method="POST"> <!--action="https://formsubmit.co/ecd140b5d5b1a3deb8ffe5ca7be23196"-->
+        {% csrf_token %}
+            <!-- Nombre usuario -->
+        <div class="mb-2 px-5" id="divNombre">
+            <label class="my-2 col-12 p-1 text-center" for="nombre">Nombre</label>
+            <input id="nombre" name="name" type="text" class="form-control">
+        </div>
+        <!-- Gmail usuario -->
+        <div class="mb-2 px-5">
+            <label for="correo" class="form-label col-12 p-1 text-center">Correo electrónico</label>
+            <input id="correo" name="email" type="email" class="form-control" placeholder="nombre@gmail.com">
+        </div>
+        <!-- Text-area usuario -->
+        <div class="px-5">
+            <label for="mensaje" class="form-label col-12 p-1 text-center">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="message" placeholder="Escríbeme..." rows="4"></textarea>
+        </div>
+        <!-- Para enviar los datos del formulario -->
+        <div class="botonEnviar text-center ">
+            <input class="boton-diseno px-5 py-2 " type="submit" value="Enviar" id="enviar">
+        </div>
+        
+    </form>
+
+
+
+    </div>
+</div>
+
+
+<footer class = "col-12 py-5 mt-5">
+    <p id = "seccion-otros" class = "text-center text-light py-5">2024 Brandon Casas. Todos los derechos reservados </p>
+    
+</footer>
+
+
+<!--JS BOOSTRAP-->
+{% bootstrap_javascript %}
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
