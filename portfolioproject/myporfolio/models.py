@@ -41,8 +41,10 @@ class Contacto(models.Model):
     fecha = models.DateTimeField(auto_now_add=True)
 
 def save(self, *args, **kwargs):
+# Cifra el mensaje antes de guardarlo
     self.mensaje_cifrado = encrypt_message(self.mensaje)
-    super().save(*args,**kwargs)
+    super('').save(*args, **kwargs)
+
 
 def get_mensaje(self):
     return decrypt_message(self.mensaje_cifrado)

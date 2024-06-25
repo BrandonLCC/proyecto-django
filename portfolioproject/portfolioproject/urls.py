@@ -22,7 +22,8 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myporfolio.urls')),
-    path('accounts/', include('django.contib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),  ########Añade las vistas de autenticación de Django
+
 ]
 
 if settings.DEBUG: 

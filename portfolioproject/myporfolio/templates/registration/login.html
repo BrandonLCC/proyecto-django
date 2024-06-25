@@ -1,12 +1,14 @@
 {% extends 'base_generic.html' %}
 {% block content %}
+
     <div class = "container mt-5">
-        <h2>Iniciar sesion</h2>
-        <form method = "POST" action="">
+        <h2 class = "text-center mb-4 " >Iniciar sesion</h2>
+        <form method = "POST" action="" class="mx-auto " style="max-width: 400px;">
             {% csrf_token %}
             {{ form.as_p  }}
-            <button type = "submit" class = "btn btn-primary" >Iniciar sesión</button>
-
+            <div class = "d-grid">
+                <button type = "submit" class = "btn btn-primary btn-block" >Iniciar sesión</button>
+            </div>  
         </form>
     </div>
 {% endblock %}
