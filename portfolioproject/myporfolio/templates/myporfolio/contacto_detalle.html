@@ -1,7 +1,7 @@
 {% extends 'base_generic.html' %}
 
 {% block content %}
-    <div class = "container mt-5">
+    <div class = "container mt-5 text-light">
         <h2>Detalle contacto</h2>
         <p><strong>Nombre:</strong>{{contacto.nombre}}</p>
         <p><strong>Email:</strong>{{contacto.email}}</p>
@@ -13,12 +13,12 @@
     style= "display: inline;">
   
     {% csrf_token %}
-    <button type="submit" class = "btn btn-danger">Eliminar</button>
+    <button type="submit" class = "btn btn-danger text-light">Eliminar</button>
 
-    <button type="submit" class = "btn btn-primary">Guardar</button>
+    <button type="submit" class = "btn btn-primary text-light">Guardar</button>
 
 </form>
-    <a href="{% url 'contacto_lista' %}" class = "btn btn-secondary">Volver a la lista</a>
+    <a href="{% url 'contacto_lista' %}" class = "btn btn-secondary text-light">Volver a la lista</a>
 
 </div>   
 {% endblock %}

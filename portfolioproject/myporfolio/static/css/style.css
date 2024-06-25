@@ -81,13 +81,17 @@ body {
     position: relative;
 }
 
+
+/* CORREGIR ESTE ERROR */
 .imagen-carrusel {
     filter: blur(20px);
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 120vh; 
+    min-height: 120vh; /*aqui*/
+    max-height: 300vh;
+
 }
 
 .hijo-texto-carrusel-1 {
