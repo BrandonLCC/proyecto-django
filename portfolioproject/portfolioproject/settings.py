@@ -40,8 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myporfolio',
     'bootstrap5',
-
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+CKEDITOR_UPLOAD_PATH = "uploads/"####   Etapa 4 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

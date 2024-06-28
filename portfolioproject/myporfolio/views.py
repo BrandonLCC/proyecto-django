@@ -59,3 +59,7 @@ def contacto_confirmacion(request):
 @login_required
 def vista_protegida(request):
     return render(request, 'vista_protegida.html')
+
+def proyecto_detalle(request, pk):
+    proyecto = get_object_or_404(Proyecto, pk=pk)
+    return render(request, 'proyecto_detalle.html', {'proyecto': proyecto})

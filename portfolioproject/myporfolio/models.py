@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField 
 from .utils import encrypt_message, decrypt_message
 # Create your models here.
 
@@ -23,6 +24,7 @@ class Proyecto (models.Model):
     titulo = models.CharField(max_length=200)
     imagen = models.ImageField(upload_to='proyectos/')
     descripcion = models.TextField()
+    contenido = RichTextField()  # Campo de texto enriquecido#######ETAPA 5
     tecnologias = models.ManyToManyField(Tecnologias)
     link_sitio = models.URLField(max_length=200)
     link_repositorio = models.URLField(max_length=200)

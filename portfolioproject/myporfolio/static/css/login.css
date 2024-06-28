@@ -1,0 +1,77 @@
+* {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+.imagen-login {
+    position: absolute;
+    filter: blur(60px);
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+}
+
+:root {
+    --fondo-pagina-web: #020911;
+    --color-blanco: #ffffff;
+}
+
+.div_formulario {
+    position: relative;
+    background-color: rgba(1, 12, 27, 0.5); 
+    border-top-left-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(32, 48, 94, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.titulo {
+    background-color: rgba(32, 48, 94, 0.4); 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 1px solid rgba(32, 48, 94, 0.4);
+    border-left: 1px solid rgba(32, 48, 94, 0.4);
+    border-right: 1px solid rgba(32, 48, 94, 0.4);
+    animation-name: animacion-Cambio-Color;
+    animation-duration: 3s; 
+    animation-timing-function:ease-in-out; 
+    animation-iteration-count: infinite; 
+    border-bottom: 1px solid rgba(32, 48, 94, 0.9);
+}
+
+.sub-titulo {
+    position: relative;
+    display: flex;
+    bottom: 50px;
+    background-color: rgba(32, 48, 94, 0.2); 
+    border-bottom: 1px solid rgba(32, 48, 94, 0.4);
+    text-shadow: 0px 0px 5px #c074ff;
+} 
+
+form {
+    background-color: rgba(1, 32, 46, 0.5); 
+    bottom: 35px;
+    align-items: center;
+}
+
+/* BOTON INICIAR SESION */
+
+.boton-diseno-login {
+    position: relative;
+    color: #ffffff;
+    background-color: #021320; 
+    border: 1px solid rgb(163, 252, 255); 
+    text-shadow: 0px 0px 20px #1cb7ff;
+    text-decoration: none;
+    text-align: center;
+}

@@ -9,10 +9,11 @@
     <title>Portafolio</title>
     <!-- FONSTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <!--Link boostap y enlace css-->
     {% bootstrap_css %}
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="./assets/css/normalize.css">
 
@@ -70,6 +71,9 @@
         <p class = "hijo-texto-carrusel  col-11 col-sm-11  col-md-9 p-2 my-auto mx-auto text-center">
         Soy un ingeniero informatico enfocado en el desarollo de paginas web y te invito a que veas mi portafolio que hice con mucha dedicación ¡Espero que te guste!</p>
     </div>
+
+
+    
     </div>
 </div>
 <!--FIN CARRUSEL-->
@@ -120,8 +124,10 @@
                 <p class="card-text p-3">{{ proyecto.descripcion }}</p>
 
                 <div class = "boton-proyecto p-1 row">
+
                     <a href="{{ proyecto.link_sitio }}" class="boton-diseno my-2 py-1 col-8">Ver aquí</a>
-                    <a href="{{ proyecto.link_repositorio }}" class="boton-diseno boton-diseno-2 my-2 py-1 col-8" target="_blank">Repositorio</a>
+                    <a href="{{ proyecto.link_repositorio }}" class=" boton-diseno-2 my-2 py-1 col-8" target="_blank">Repositorio</a>
+                    <a href="{% url 'proyecto_detalle' proyecto.pk %}" class="boton-diseno my-2 py-1 col-8 ">Ver Detalle</a> <!-- Nuevo botón -->
                 </div>
             </div>
         </div>
@@ -136,43 +142,45 @@
 
 <!--Seccion de skills-->
 <div class = "habilidades-padre col-11 my-5 mx-auto text-light">
-<div class = "titulo-habilidades p-2  text-light text-center">
-    <h2 >Mis habilidades</h2>
-</div>
+    <div class = "titulo-habilidades p-2  text-light text-center">
+        <h2 >Mis habilidades</h2>
+    </div>
+
 <div class = "iconos-habilidades     d-flex flex-wrap">
     <div class = "diseno-div-iconos  mx-auto my-4">
         <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-javascript-96.png' %}" alt="">
         <h5 class = "text-center text-ico-1" >JavaScrip</h5>
-    <p class = "text-center text-ico-1">40%</p>
+        <p class = "text-center text-ico-1">40%</p>
     </div> 
+
     <div class = "diseno-div-iconos  mx-auto my-4">
         <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-css-96.png' %}" alt="">
         <h4 class = "text-center text-ico-2" >css</h4>
-    <p class = "text-center text-ico-2">80%</p>
+        <p class = "text-center text-ico-2">80%</p>
     </div>
 
     <div class = "diseno-div-iconos  mx-auto my-4">
         <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-python-96.png' %}" alt="">
         <h5 class = "text-center text-ico-3" >Python</h5>
-    <p class = "text-center text-ico-3">60%</p>
+        <p class = "text-center text-ico-3">60%</p>
     </div> 
 
     <div class = "diseno-div-iconos mx-auto my-4">
         <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-sql-96.png' %}" alt="">
         <h5 class = "text-center text-ico-4" >oracle SQL</h5>
-    <p class = "text-center text-ico-4">80%</p>
+        <p class = "text-center text-ico-4">80%</p>
     </div> 
 
     <div class = "diseno-div-iconos  mx-auto my-4">
         <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-java-96.png' %}" alt="">
         <h5 class = "text-center text-ico-5" >java</h5>
-    <p class = "text-center text-ico-5">70%</p>
-    
+        <p class = "text-center text-ico-5">70%</p>
     </div>
+
     <div class = "diseno-div-iconos  mx-auto my-4">
         <img class="m-3 iconos-habilidades-diseno" src="{% static 'images/icons8-bootstrap-96.png' %}" alt="">
         <h5 class = "text-center text-ico-6" >Boostrap</h5>
-    <p class = "text-center text-ico-6">80%</p>
+        <p class = "text-center text-ico-6">80%</p>
     </div>
 </div>
 </div>  
