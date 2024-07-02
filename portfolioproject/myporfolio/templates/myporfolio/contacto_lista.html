@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Portafolio</title>
-    <link rel="stylesheet" href="{% static 'css/contacto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lista_contacto.css' %}">
 
 </head>
 <body>
 
     <div class = "container text-light mt-5">
-        <h2>Contactos recibidos</h2>
+        <h2 class = "titulo p-1 ps-2 my-2">Contactos recibidos</h2>
         <div class = "table-responsive">
             <table class = "table table-hover align-middle">
-                <thead class = "table-dark">
-                    <tr>
+                <thead class = "encabezado">
+                    <tr >
                         <th scope = "col">Nombre</th>
                         <th scope = "col">Email</th>
                         <th scope = "col">Mensaje</th>
@@ -28,16 +28,16 @@
                 </thead>
                 <tbody>
                     {% for contacto in contactos %}
-                    <tr  >
+                    <tr>
                         <td>{{ contacto.nombre }}</td>
                         <td>{{ contacto.email }}</td>
                         <td>{{ contacto.mensaje }}</td>
                         <td class = "text-center">
-                            <a href="{% url 'contacto_detalle' contacto.pk %}" class = "btn btn-info btn-sm m-1">Ver</a>
-                            <a href="{% url 'contacto_editar' contacto.pk %}" class = "btn btn-info btn-sm m-1">Editar</a>   
+                            <a href="{% url 'contacto_detalle' contacto.pk %}" class = "btn boton-1 btn-sm m-1">Ver</a>
+                            <a href="{% url 'contacto_editar' contacto.pk %}" class = "btn boton-3 btn-sm m-1">Editar</a>   
                             <form method="POST" action="{% url 'contacto_eliminar' contacto.pk %}" style = "display: inline;">
                                 {% csrf_token %}
-                                <button type="submit" class = "btn btn-danger btn-sm m-1">Eliminar</button>
+                                <button type="submit" class = "btn boton-2 btn-sm m-1 ">Eliminar</button>
                             </form>  
                         </td>
                     </tr>

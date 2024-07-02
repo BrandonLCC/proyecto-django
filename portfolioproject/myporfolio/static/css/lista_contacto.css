@@ -1,0 +1,78 @@
+.titulo {
+    background-color: rgba(32, 48, 94, 0.6) ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.container {
+    background-color: rgba(32, 48, 94, 0.2); 
+    border-radius: 10px;
+    border: 1px solid #032f52;
+    text-shadow: 0px 0px 5px #747dff;
+
+}
+
+.encabezado {
+    background-color: rgba(32, 87, 94, 0.2); 
+
+}
+
+.table {
+    background-color: rgba(32, 48, 94, 0.2);  
+    border: 1px solid #032f52;
+    color: aliceblue;
+
+}
+
+
+/* botones */
+
+.boton-1 {
+    background-color: rgba(7, 78, 78, 0.5); 
+    border: 1px solid rgba(7, 78, 78, 0.5) ;
+    color: aliceblue;
+    text-shadow: 0px 0px 20px #747dff;
+    transition: transform 500ms ease;
+
+}
+
+.boton-1:hover {
+    text-shadow: 0px 0px 20px #74c0ff;
+    color: rgb(118, 239, 255);
+    border-color:  rgb(118, 216, 255);
+    transform: translateY(-5px);
+
+}
+
+
+.boton-2 {
+    position: relative;
+    background-color: rgba(139, 0, 0, 0.2); /* Rojo con opacidad */
+    border: 1px solid rgba(139, 0, 0, 0.5); /* Rojo con opacidad */
+    color: aliceblue;
+    text-shadow: 0px 0px 20px #ff7474; /* Sombra de texto rojo claro */
+    transition: transform 500ms ease;
+    top: 7px;
+}
+
+.boton-2:hover {
+    text-shadow: 0px 0px 20px #ff7474; /* Sombra de texto rojo claro */
+    color: rgb(255, 118, 118); /* Rojo claro */
+    border-color: rgb(255, 118, 118); /* Rojo claro */
+    transform: translateY(-5px);
+}
+
+.boton-3 {
+    background-color: rgba(0, 128, 0, 0.2); /* Verde esmeralda con opacidad */
+    border: 1px solid rgba(0, 128, 0, 0.5); /* Verde esmeralda con opacidad */
+    color: aliceblue;
+    text-shadow: 0px 0px 20px #74ff74; /* Sombra de texto verde claro */
+    transition: transform 500ms ease;
+}
+
+.boton-3:hover {
+    text-shadow: 0px 0px 20px #74ff74; /* Sombra de texto verde claro */
+    color: rgb(118, 255, 118); /* Verde claro */
+    border-color: rgb(118, 255, 118); /* Verde claro */
+    transform: translateY(-5px);
+}

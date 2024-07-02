@@ -1,0 +1,45 @@
+
+.container {
+    color: aliceblue;
+    background-color: rgba(7, 78, 78, 0.2);
+    border-radius: 10px; 
+}
+h2 {
+    background-color: rgba(7, 78, 78, 0.2);
+    border-radius: 10px; 
+
+}
+
+.imagen-detalles-desc {
+    position: absolute;
+    filter: blur(20px);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    z-index: -1;
+    bottom: 20px;  
+}
+
+form {
+    background-color: rgba(2, 83, 83, 0.2);
+
+}
+
+form:hover {
+    animation-duration: 5000ms;
+    background-color: rgba(2, 83, 83, 0.2);
+
+}
+
+.boton-from {
+    display: flex;
+    text-align: center;
+    background-color: rgba(7, 78, 78, 0.5); 
+    border: 1px solid rgba(7, 78, 78, 0.5) ;
+    color: aliceblue;
+    text-shadow: 0px 0px 20px #747dff;
+    transition: transform 500ms ease;
+
+}

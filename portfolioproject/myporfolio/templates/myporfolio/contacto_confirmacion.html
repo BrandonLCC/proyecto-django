@@ -1,9 +1,32 @@
 {% extends 'base_generic.html' %}
+{% load static %}
 
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Contacto</title>
+    <!-- FONSTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!-- enlace css-->
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/formulario_contacto.css' %}">
+
+
+</head>
+<body>
+    <img src="{% static 'images/imagen-fondo1.avif' %}" class="imagen-detalles-desc   w-100 " alt="...">
+
     <div class = "container mt-5">
-        <h2>Gracias por tu mensaje</h2>
-        <p>Pronto nos contactamos</p>
+        <h2 class = "text-center">Gracias por tu mensaje</h2>
+        <p class = "text-center">Pronto nos contactamos</p>
     </div>
 
-{% endblock %}
+{% endblock %}       
+</body>
+</html>
