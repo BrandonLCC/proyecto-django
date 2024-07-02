@@ -1,12 +1,12 @@
 {% extends 'base_generic.html' %}
 
 {% block content %}
-    <div class = "container mt-5">
+    <div class = "container mt-5 text-light">
         <h2>Editar Cotacto</h2>
-        <form method="POST" class ="needs-validation" novalidate>
+        <form method="POST" class ="needs-validation " novalidate>
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class = "btn btn-primary">Guardar</button>
+            <button type="submit" class = "btn btn-primary ">Guardar</button>
             <a href="{% url 'contacto_lista' %}" class = "btn btn-primary">cancelar</a>
         </form>
     </div>

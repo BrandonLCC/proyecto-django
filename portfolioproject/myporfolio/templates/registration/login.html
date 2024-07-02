@@ -6,34 +6,13 @@
 
 {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Portafolio</title>
-    <!-- FONSTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
-
-</head>
-<body>
-    <img src="{% static 'images/example.jpg' %}" class="imagen-login  d-block w-100" alt="...">
-
-    <div class = "div_formulario container col-11 col-md-7 col-lg-4 col-sm-9 text-light">
-        <div class = "titulo text-center  row mb-5" >
-            <h2 class = "p-2" >Iniciar sesion</h2>
-        </div>
-        <div class = "sub-titulo  text-center  row mb-5" >
-            <h6 class = "pt-2" >Solo pueden iniciar sesión solo los usuarios registrados en el sistema.</h6>
-        </div>
-
-        <form method = "POST" action="" class="col-12 p-5   m-auto" style="max-width: 400px;">
-
-                    {% csrf_token %}
-                    {{ form.as_p  }}
+    <div class = "container mt-5">
+        <h2 class = "text-center mb-4 " >Iniciar sesion</h2>
+        <form method = "POST" action="" class="mx-auto " style="max-width: 400px;">
+            {% csrf_token %}
+            {{ form.as_p  }}
             <div class = "d-grid">
-                <button type = "submit" class = "boton-diseno-login btn btn-primary btn-block mt-2 mb-2 " >Iniciar sesión</button>
+                <button type = "submit" class = "btn btn-primary btn-block" >Iniciar sesión</button>
             </div>  
         </form>
 
