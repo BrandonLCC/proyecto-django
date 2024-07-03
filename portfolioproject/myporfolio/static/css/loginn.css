@@ -6,6 +6,21 @@
 }
 
 
+.container {
+    background-color: rgba(1, 12, 27, 0.5); 
+    
+}
+
+.div1 {
+    background-color: rgba(20, 1, 27, 0.5); 
+
+}
+
+.div2{
+    background-color: rgba(1, 27, 16, 0.5); 
+
+}
+
 .imagen-login {
     position: absolute;
     filter: blur(60px);

@@ -8,25 +8,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loginn.css' %}">
 
     
 </head>
 <body>
-    <div class = "container mt-5">
-        <h2 class = "text-center mb-4 " >Iniciar sesion</h2>
-        <form method = "POST" action="" class="mx-auto " style="max-width: 400px;">
-            {% csrf_token %}
-            {{ form.as_p  }}
-            <div class = "d-grid">
-                <button type = "submit" class = "btn btn-primary btn-block" >Iniciar sesión</button>
-            </div>  
-        </form>
 
+    <div class = "container mt-5 p-3 ">
+        <div class="div1">
+            <h2 class = "titulo text-center mb-4  " >Iniciar sesion</h2>
+            <form method = "POST" action="" class="mx-auto " style="max-width: 400px;">
+                {% csrf_token %}
+                {{ form.as_p  }}
+                <div class = "d-grid">
+                    <button type = "submit" class = "boton-diseno-login btn-block" >Iniciar sesión</button>
+                </div>  
+            </form>    
+        </div>
+        
+
+        <div class = "div2 ">
+            <h2>example</h2>
+        </div>
     </div>
-{% endblock %}
+
     
+
 </body>
 </html>
-
- 
+{% endblock %}
