@@ -1,11 +1,18 @@
 {% extends 'base_generic.html' %}
 {% load static %}
-
-
 <!-- AQUI EMPIEZA EL LOGIN  -->
-
 {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
+    
+</head>
+<body>
     <div class = "container mt-5">
         <h2 class = "text-center mb-4 " >Iniciar sesion</h2>
         <form method = "POST" action="" class="mx-auto " style="max-width: 400px;">
@@ -18,6 +25,8 @@
 
     </div>
 {% endblock %}
-
+    
 </body>
 </html>
+
+ 
