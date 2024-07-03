@@ -1,26 +1,3 @@
-* {
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
-
-
-.container {
-    background-color: rgba(1, 12, 27, 0.5); 
-    
-}
-
-.div1 {
-    background-color: rgba(20, 1, 27, 0.5); 
-
-}
-
-.div2{
-    background-color: rgba(1, 27, 16, 0.5); 
-
-}
-
 .imagen-login {
     position: absolute;
     filter: blur(60px);
@@ -37,7 +14,7 @@
     --color-blanco: #ffffff;
 }
 
-.div_formulario {
+.div-formulario {
     position: relative;
     background-color: rgba(1, 12, 27, 0.5); 
     border-top-left-radius: 10px;
@@ -74,9 +51,18 @@
 } 
 
 form {
+    position: relative;
     background-color: rgba(1, 32, 46, 0.5); 
-    bottom: 35px;
-    align-items: center;
+
+}
+
+.div-input {
+    
+    color: #ffffff;
+    position: relative;
+    display: flexbox;
+    border: 1px solid;
+    border-radius: 10px;
 }
 
 /* BOTON INICIAR SESION */
