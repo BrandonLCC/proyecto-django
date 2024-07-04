@@ -1,15 +1,15 @@
 * {
-  padding: 0;
-  margin: 0;  
+    padding: 0;
+    margin: 0;  
 }
 
 .titulo {
- color:  rgba(255, 255, 255, 0.9); 
- text-shadow: 0px 0px 30px #747dff;
- background-color: rgba(7, 78, 78, 0.2); 
- border-radius: 10px;
- text-align: center;  
- border: 1px solid #747dff17 ;
+    color:  rgba(255, 255, 255, 0.9); 
+    text-shadow: 0px 0px 30px #747dff;
+    background-color: rgba(7, 38, 78, 0.1); 
+    border-radius: 10px;
+    text-align: center;  
+    border: 1px solid #747dff17 ;
 }
 
 .imagen-detalles {
@@ -26,18 +26,18 @@
 .imagen-detalles-desc {
     position: absolute;
     filter: blur(50px);
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
     justify-content: center;
     align-items: center;
     display: block;
     z-index: -1;
-    bottom: 20px;  
+    top: 200px;  
 
 }
 
 .imagen-detalle-div {
-    background-color: rgba(7, 78, 78, 0.1); 
+    background-color: rgba(7, 38, 78, 0.1); 
 
     border-radius: 10px;
     display: flex;
@@ -47,13 +47,13 @@
 
 .div-padre-desc {
     position: relative;
-    background-color: rgba(7, 78, 78, 0.2); 
+    background-color: rgba(7, 38, 78, 0.1); 
     border-radius: 10px;
     color: aliceblue;
 }
 
 .descripcion-descripcion {
-    background-color: rgba(0, 73, 73, 0.1); 
+    background-color: rgba(7, 38, 78, 0.1); 
     border-radius: 10px;
     text-align:left;
 }
@@ -77,32 +77,32 @@
 
 
 .boton-2 {
-    background-color: rgba(139, 0, 0, 0.2); /* Rojo con opacidad */
-    border: 1px solid rgba(139, 0, 0, 0.5); /* Rojo con opacidad */
+    background-color: rgba(139, 0, 0, 0.2); 
+    border: 1px solid rgba(139, 0, 0, 0.5); 
     color: aliceblue;
-    text-shadow: 0px 0px 20px #ff7474; /* Sombra de texto rojo claro */
+    text-shadow: 0px 0px 20px #ff7474; 
     transition: transform 500ms ease;
 }
 
 .boton-2:hover {
-    text-shadow: 0px 0px 20px #ff7474; /* Sombra de texto rojo claro */
-    color: rgb(255, 118, 118); /* Rojo claro */
-    border-color: rgb(255, 118, 118); /* Rojo claro */
+    text-shadow: 0px 0px 20px #ff7474; 
+    color: rgb(255, 118, 118); 
+    border-color: rgb(255, 118, 118); 
     transform: translateY(-5px);
 }
 
 .boton-3 {
-    background-color: rgba(0, 128, 0, 0.2); /* Verde esmeralda con opacidad */
-    border: 1px solid rgba(0, 128, 0, 0.5); /* Verde esmeralda con opacidad */
+    background-color: rgba(0, 128, 0, 0.2); 
+    border: 1px solid rgba(0, 128, 0, 0.5); 
     color: aliceblue;
-    text-shadow: 0px 0px 20px #74ff74; /* Sombra de texto verde claro */
+    text-shadow: 0px 0px 20px #74ff74; 
     transition: transform 500ms ease;
 }
 
 .boton-3:hover {
-    text-shadow: 0px 0px 20px #74ff74; /* Sombra de texto verde claro */
-    color: rgb(118, 255, 118); /* Verde claro */
-    border-color: rgb(118, 255, 118); /* Verde claro */
+    text-shadow: 0px 0px 20px #74ff74; 
+    color: rgb(118, 255, 118); 
+    border-color: rgb(118, 255, 118);
     transform: translateY(-5px);
 }
 
