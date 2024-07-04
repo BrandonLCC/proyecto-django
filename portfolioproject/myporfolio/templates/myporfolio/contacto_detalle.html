@@ -1,24 +1,51 @@
 {% extends 'base_generic.html' %}
-
+{% load static %}
 {% block content %}
-    <div class = "container mt-5 text-light">
-        <h2>Detalle contacto</h2>
-        <p><strong>Nombre:</strong>{{contacto.nombre}}</p>
-        <p><strong>Email:</strong>{{contacto.email}}</p>
-        <p><strong>Mensaje:</strong>{{contacto.mensaje}}</p>
-        <a href="{% url 'contacto_editar' contacto.pk %}" class = "btn btn-primary">Editar</a>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/formulario-detalle-contactos.css' %}">
 
-<form method="POST" action="{% url 'contacto_eliminar' contacto.pk %}"  
-    style= "display: inline;">
-  
-    {% csrf_token %}
-    <button type="submit" class = "btn btn-danger text-light">Eliminar</button>
+</head>
 
-    <button type="submit" class = "btn btn-primary text-light">Guardar</button>
+<body>
+    <div class = "container col-6">
+    <div class="div-texto p-2 my-2">
+        
+            <h2 class = "ttitulo-detalle p-2 ">Detalle contacto</h2>
+            <h6 class = "subttitulo-detalle  p-2  text-center">Informacion en detalle del contacto</h6>
+            <p class="parra mt-3 mx-5 py-2 ps-3"><strong>Nombre: </strong>{{contacto.nombre}}</p>
+            <p class="parra mx-5 py-2 ps-3"><strong>Email: </strong>{{contacto.email}}</p>
+            <p class="parra mx-5 py-2 ps-3"><strong>Mensaje: </strong>{{contacto.mensaje}}</p>    
+    </div>  
 
-</form>
-    <a href="{% url 'contacto_lista' %}" class = "btn btn-secondary text-light">Volver a la lista</a>
+    <div class = "div-acciones p-2 my-2">
+        <h5 class = "titulo-acciones p-2 text-center">Acciones</h5>
+        <h6 class = "subttitulo-acciones  p-2"><b>Seleccione una saccion:</b> Eliminar un contacto, guardar editar o volver a la lista de contactos principal.</h6>
+        
+        <a href="{% url 'contacto_editar' contacto.pk %}" class = "btn boton-detalle-1 btn-sm m-1">Editar</a>
+        <a href="{% url 'contacto_lista' %}" class = "btn boton-detalle-3 btn-sm m-1">Volver a la lista</a>
 
+    <form method="POST" action="{% url 'contacto_eliminar' contacto.pk %}"  
+        style= "display: inline;">
+        
+        {% csrf_token %}
+        <button type="submit" class = "btn boton-detalle-2 btn-sm m-1">Eliminar</button>
+        <button type="submit" class = "btn boton-detalle-4 btn-sm m-1">Guardar</button>
+
+    </form>
+    </div>
 </div>   
 {% endblock %}
+    
+
+
+
+</body>
+</html>
+
+

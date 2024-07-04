@@ -10,23 +10,34 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'css/loginn.css' %}">
 
-    
+
 </head>
+
+
 <body>
+    <img src="{% static 'images/example-carrusel.jpeg' %}" class="imagen-login  d-block w-100 " alt="...">
+
+    <img class = "logo ms-3 my-3" src="{% static 'images/logo.png' %}" alt="...">
 
     <div class = "div-formulario  ">
+
         <div>
-            <h2 class = "titulo text-center   " >Iniciar sesion</h2>
+            <img src="{% static 'images/imagen-fondo1.avif' %}" class="imagen-login  d-block w-100 " alt="...">
+
+            <h2 class = "titulo text-center py-2" >Iniciar sesion</h2>
+
         </div>
-        
-        <form method = "POST"  class="m-3 p-2 " style="max-width: 300px;">
+
+        <form method = "POST"  class="mt-4 mx-3  p-2 " style="max-width: 300px;">
+
             <div class = "div-input my-2  mx-auto row px-2 py-2  text-center">
                 {% csrf_token %}
-                {{ form.as_p  }}    
+                {{ form.as_p  }} 
+                <h6>Has olvidado tu contrasena?</h6>
+   
             </div>
-            
             <div class = "d-grid">
-                <button type = "submit" class = "boton-diseno-login btn-block" >Iniciar sesión</button>
+                <button type = "submit" class = "col-6 py-2 mb-2 mx-auto boton-diseno-login btn-block" >Iniciar sesión</button>
             </div>  
         </form>    
     
