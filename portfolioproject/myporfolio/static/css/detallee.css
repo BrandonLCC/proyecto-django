@@ -27,12 +27,12 @@
     position: absolute;
     filter: blur(50px);
     height: 50%;
-    width: 50%;
+    width: 30%;
     justify-content: center;
     align-items: center;
     display: block;
     z-index: -1;
-    top: 200px;  
+    top: 80px;  
 
 }
 

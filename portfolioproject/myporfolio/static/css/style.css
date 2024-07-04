@@ -379,7 +379,6 @@ form {
     position: relative;
     transition: transform 500ms ease;
      background-color: #01090f;
-    border-radius: 10px;
     margin-bottom: 20px;
     bottom: 7px;
     text-shadow: 0px 0px 5px #74ffd5; 
