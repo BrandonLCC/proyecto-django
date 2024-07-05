@@ -28,6 +28,7 @@
 .titulo {
     background-color: rgba(32, 48, 94, 0.288); 
     border: 1px solid rgba(32, 48, 94, 0.9);
+    text-shadow: 0px 0px 20px #78a3ff;
     border-top-left-radius: 10px;
     margin: 0;
 
@@ -36,6 +37,7 @@
 .sub-titulo {
     background-color: rgba(32, 48, 94, 0.1); 
     border: 1px solid rgba(32, 48, 94, 0.9);
+    text-shadow: 0px 0px 20px #78a3ff;
     margin: 0;
     
 } 
@@ -53,8 +55,6 @@ form {
     border-radius: 10px;
 
 }
-
-
 
 input {
     margin-top: 10px;
@@ -120,3 +120,12 @@ input {
     text-align: center;
 }
 
+.boton-diseno-login:hover {
+    transition-duration: 500ms;
+    background-color: #0a2133; 
+    color: #c3ffcb;
+    border-radius: 5px;
+    border: 1px solid #78ffb9; 
+    text-shadow: 0px 0px 20px #78ffb9;
+
+}
