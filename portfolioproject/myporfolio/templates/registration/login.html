@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/loginn.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
 
 </head>
 
 
 <body>
+     <!--
     <img src="{% static 'images/example-carrusel.jpeg' %}" class="imagen-login  d-block w-100 " alt="...">
 
     <img class = "logo ms-3 my-3" src="{% static 'images/logo.png' %}" alt="...">
@@ -37,10 +38,41 @@
    
             </div>
             <div class = "d-grid">
+                
                 <button type = "submit" class = "col-6 py-2 mb-2 mx-auto boton-diseno-login btn-block" >Iniciar sesión</button>
             </div>  
         </form>    
     
+    </div>
+-->
+
+<img class = "logo ms-3 my-3" src="{% static 'images/logo.png' %}" alt="...">
+<img src="{% static 'images/example.jpg' %}" class="imagen-login   d-block w-100 " alt="...">
+
+    <div class="container col-8 py-4 row">
+
+        <div class="div1 col-12 col-sm-10 col-md-6 m-auto  ">
+            <h2 class = "titulo text-center py-1" >Iniciar sesion</h2>
+            <h6 class = "sub-titulo text-center py-1" >Puedes iniciar sesion de forma segura y confiable ¡Te damos la bienvenida!</h6>
+
+            <div class="div-formulario ">
+                <form method = "POST"  class="mx-auto" style="max-width: 300px;">
+                    <div class = "div-input my-2  mx-auto row px-2 py-2  text-center">
+                        {% csrf_token %}
+                        {{ form.as_p  }} 
+                    </div>
+                    
+                    <div class = "d-grid">
+                        <button type = "submit" class = "col-6 py-2 mb-2 mx-auto boton-diseno-login btn-block" >Iniciar sesión</button>
+                    </div>  
+                </form>
+            </div>
+        </div>
+
+        <div class="div2 col-6 me-auto ">
+            <img src="{% static 'images/imagen-formulario.png' %}" class="imagen-div2 d-block w-100 " alt="...">
+        
+        </div>
     </div>
 
 </body>
