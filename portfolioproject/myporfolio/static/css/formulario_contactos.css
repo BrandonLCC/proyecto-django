@@ -8,7 +8,7 @@
 
 .imagen-detalles-desc {
     position: absolute;
-    filter: blur(15px);
+    filter: blur(20px);
     height: 100%;
     width: 100%;
     justify-content: center;
